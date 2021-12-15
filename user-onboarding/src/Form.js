@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css'
 
 export default function Form(props){
     const {values, submit, change, disabled, errors,}= props
@@ -14,7 +15,7 @@ export default function Form(props){
         change(name, valueToUse)
     }
   return (
-      <form onSubmit={onSubmit}>
+      <form className='form'   onSubmit={onSubmit}>
           <div>
             <h2>Add a new Member!</h2>
             <div>{errors.first_name}</div>
