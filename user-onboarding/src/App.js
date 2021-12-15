@@ -33,9 +33,9 @@ function App() {
 
   const getMembers = () => {
     axios.get('https://reqres.in/api/users')
-      .then(resp => {
-        setMembers(resp.data)
-      }).catch(err => console.error(err))
+      .then(resp => 
+        setMembers(resp.data.data)
+      ).catch(err => console.error(err))
   }
 
   const postNewMember = newMember => {
@@ -61,7 +61,8 @@ const inputChange = (name, value) => {
     const newMember = {
       first_name: formValues.first_name.trim(),
       email: formValues.email.trim(),
-      password: formValues.password
+      password: formValues.password,
+      tos: formValues.tos
     }
     postNewMember(newMember)
   }
@@ -84,13 +85,13 @@ const inputChange = (name, value) => {
         disabled={disabled}
         errors={formErrors}
       />
-      {/* {
+      {
         members.map(member =>{
           return(
             <Member key={member.id} details={member} />
           )
         })
-      } */}
+      }
       
     </div>
   );

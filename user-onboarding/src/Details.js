@@ -5,7 +5,7 @@ function Member({details}){
         <div>
             <h2>{details.first_name}</h2>
             <p>Email: {details.email}</p>
-            <p>Password: {details.password}</p>
+            <img src= {details.avatar} alt="avatar" />
         </div>
 
 

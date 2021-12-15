@@ -43,7 +43,7 @@ export default function Form(props){
                     value={values.password}
                     onChange={onChange}
                     name='password'
-                    type='text'
+                    type='password'
                     />
             </label>
              </label>Terms of Service
